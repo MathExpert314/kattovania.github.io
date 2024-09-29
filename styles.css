@@ -51,6 +51,11 @@ nav ul li a {
 
 #hero h2 {
   font-size: 3em;
+  font-color: #000000;
+}
+
+#hero p {
+  font-color: #000000;
 }
 
 .content-section {
