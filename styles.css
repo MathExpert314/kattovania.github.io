@@ -42,7 +42,7 @@ nav ul li a {
 #hero {
   position: relative; 
   width: 100vw; /* 100% of viewport width */
-  height: calc((958 / 981) * 100vw); /* Calculate height based on width */
+  height: calc(((958 / 981) * 100vw) / 5); /* Calculate height based on width */
   display: flex;
   justify-content: center;
   align-items: center;
