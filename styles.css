@@ -40,34 +40,38 @@ nav ul li a {
 }
 
 #hero {
-    position: relative;
-    width: 100%; /* Full width */
-    height: 0; /* Set height to 0 to allow padding-bottom to take effect */
-    padding-bottom: 1024.37%; /* Calculate padding-bottom to maintain aspect ratio (981 / 958 * 100) */
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    color: #fff;
-    text-align: center;
-    overflow: hidden; /* Hide any overflow content */
+  position: relative; 
+  width: 100%; /* Full width */
+  height: 0; /* Height will be determined by padding-bottom */
+  padding-bottom: 102.4%; /* Maintain aspect ratio (981 / 958 * 100) */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: #fff;
+  text-align: center;
+  overflow: hidden; /* Hide any overflow content */
 }
 
 #hero::before { /* Create an overlay */
-    content: '';
-    position: absolute;
-    top: 0;
-    left: 0;
-    right: 0;
-    bottom: 0;
-    background: url("https://mathexpert314.github.io/kattovania.github.io/clock-tower.png"), rgba(0, 0, 0, 0.5); /* Dark overlay */
-    background-blend-mode: overlay; /* Blend the image and color */
-    z-index: 1; /* Ensure it sits below the text */
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: url("https://mathexpert314.github.io/kattovania.github.io/clock-tower.png") no-repeat center center; /* Center the image */
+  background-size: cover; /* Cover the entire area without tiling */
+  z-index: 1; /* Ensure it sits below the text */
 }
 
 #hero h2, #hero p { /* Bring text to the front */
-    position: relative;
-    z-index: 2;
-    text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.7); /* Soft shadow for readability */
+  position: relative;
+  z-index: 2;
+}
+
+#hero p {
+  color: #000000;
+  z-index: 3;
 }
 
 .content-section {
@@ -98,11 +102,11 @@ footer {
 }
 
 @media (max-width: 600px) {
-    #hero h2 {
-        font-size: 2em; /* Smaller font size for mobile */
-    }
-    
-    #hero p {
-        font-size: 1em; /* Smaller font size for mobile */
-    }
+  #hero h2 {
+    font-size: 2em; /* Smaller font size for mobile */
+  }
+  
+  #hero p {
+    font-size: 1em; /* Smaller font size for mobile */
+  }
 }
