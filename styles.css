@@ -48,8 +48,7 @@ nav a {
     bottom: 0;
     background-image: url('https://mathexpert314.github.io/kattovania.github.io/clock-tower.png'); /* Replace with your image URL */
     background-size: cover;
-    background-position: center;
-    transform: translateZ(0); /* Triggers hardware acceleration */
+    background-position: center, 100px;
     z-index: -1;
     will-change: transform;
 }
