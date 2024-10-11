@@ -56,7 +56,8 @@ nav ul li a {
     left: 0;
     right: 0;
     bottom: 0;
-    background: rgba(0, 0, 0, 0.5); /* Adjust the alpha for darkness */
+    background: url("https://mathexpert314.github.io/kattovania.github.io/clock-tower.png"), rgba(0, 0, 0, 0.5); /* Dark overlay */
+    background-blend-mode: overlay; /* Blend the image and color */
     z-index: 1; /* Ensure it sits below the text */
 }
 
