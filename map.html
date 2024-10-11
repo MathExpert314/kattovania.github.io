@@ -5,6 +5,38 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Map of Kattovania</title>
   <link rel="stylesheet" href="styles.css">
+  <style>
+    /* Additional styles for the map */
+    .map-container {
+      position: relative;
+      text-align: center; /* Center-align text */
+    }
+    
+    .landmark {
+      position: absolute;
+      border-radius: 50%;
+      background-color: rgba(255, 0, 0, 0.6); /* Red circle with transparency */
+      cursor: pointer;
+      transition: transform 0.3s;
+      width: 30px; /* Fixed width for circles */
+      height: 30px; /* Fixed height for circles */
+    }
+    
+    .landmark:hover {
+      transform: scale(1.2); /* Slightly enlarge on hover */
+    }
+
+    /* Tooltips */
+    .tooltip {
+      display: none;
+      position: absolute;
+      background-color: #333;
+      color: white;
+      padding: 5px;
+      border-radius: 5px;
+      z-index: 10;
+    }
+  </style>
 </head>
 <body>
   <header>
@@ -17,7 +49,7 @@
         <li><a href="index.html">Home</a></li>
         <li><a href="#about">About</a></li>
         <li><a href="#services">City Services</a></li>
-        <li><a href="map.html">Map</a></li> <!-- Added Map link here -->
+        <li><a href="map.html">Map</a></li>
         <li><a href="#contact">Contact</a></li>
       </ul>
     </nav>
@@ -25,7 +57,34 @@
 
   <section id="map" class="content-section">
     <h2>Map of Kattovania</h2>
-    <img src="https://mathexpert314.github.io/kattovania.github.io/map-of-kattovania.png" alt="Map of Kattovania" style="width: 90%; max-width: 900px; height: auto; display: block; margin: 0 auto;">
+    <div class="map-container">
+      <img src="https://mathexpert314.github.io/kattovania.github.io/map-of-kattovania.png" alt="Map of Kattovania" style="width: 90%; max-width: 900px; height: auto; display: block; margin: 0 auto;">
+      
+      <!-- Landmarks with calc() -->
+      <div class="landmark" style="top: calc(100px / 861 * 100%); left: calc(360px / 901 * 100%);" 
+           onmouseover="showTooltip(event, 'Clock Tower')" 
+           onmouseout="hideTooltip()" 
+           onclick="scrollToSection('clock-tower')"></div>
+      
+      <div class="landmark" style="top: calc(350px / 861 * 100%); left: calc(540px / 901 * 100%);" 
+           onmouseover="showTooltip(event, 'Schrödinger’s Tower')" 
+           onmouseout="hideTooltip()" 
+           onclick="scrollToSection('schrodingers-tower')"></div>
+
+      <div class="landmark" style="top: calc(240px / 861 * 100%); left: calc(180px / 901 * 100%);" 
+           onmouseover="showTooltip(event, 'Kattovania Park')" 
+           onmouseout="hideTooltip()" 
+           onclick="scrollToSection('kattovania-park')"></div>
+      
+      <div class="landmark" style="top: calc(600px / 861 * 100%); left: calc(740px / 901 * 100%);" 
+           onmouseover="showTooltip(event, 'The Great Library')" 
+           onmouseout="hideTooltip()" 
+           onclick="scrollToSection('great-library')"></div>
+
+      <!-- Tooltip -->
+      <div class="tooltip" id="tooltip"></div>
+    </div>
+    
     <p style="text-align: center; padding-top: 1rem;">Explore the detailed map of Kattovania. This map provides an in-depth look at the city's layout, important landmarks, and much more.</p>
     <p style="text-align: center;">
       <a href="index.html" style="color: #333; text-decoration: underline;">Back to Home</a>
@@ -35,5 +94,25 @@
   <footer>
     <p>&copy; 2024 City of Kattovania. All rights reserved.</p>
   </footer>
+
+  <script>
+    function showTooltip(event, text) {
+      const tooltip = document.getElementById('tooltip');
+      tooltip.innerHTML = text;
+      tooltip.style.display = 'block';
+      tooltip.style.left = event.pageX + 'px';
+      tooltip.style.top = event.pageY - 30 + 'px'; // Adjust tooltip position
+    }
+
+    function hideTooltip() {
+      const tooltip = document.getElementById('tooltip');
+      tooltip.style.display = 'none';
+    }
+
+    function scrollToSection(sectionId) {
+      const section = document.getElementById(sectionId);
+      section.scrollIntoView({ behavior: 'smooth' });
+    }
+  </script>
 </body>
 </html>
