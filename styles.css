@@ -43,7 +43,6 @@ nav ul li a {
   position: relative; 
   width: 100vw; /* 100% of the viewport width */
   height: calc((var(--your-element-height) / 981) * 958);
-  padding-bottom: 102.4%; /* Maintain aspect ratio (981 / 958 * 100) */
   display: flex;
   justify-content: center;
   align-items: center;
