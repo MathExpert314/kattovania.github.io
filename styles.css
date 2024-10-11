@@ -21,6 +21,17 @@ header {
     color: white;
 }
 
+/* Logo Section Adjustments */
+.logo {
+    display: flex; /* Use flexbox for alignment */
+    align-items: center; /* Center items vertically */
+}
+
+.logo img {
+    height: 50px; /* Adjust height to match the text */
+    margin-right: 10px; /* Space between the flag and the text */
+}
+
 nav ul {
     list-style: none;
     display: flex;
