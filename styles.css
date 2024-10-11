@@ -35,10 +35,23 @@ nav a {
 /* Hero Section with Parallax */
 #hero {
     position: relative;
-    height: 20vh; /* Shortened height */
+    height: 20vh; /* Adjusting the height */
     overflow: hidden;
-    background: url("https://mathexpert314.github.io/kattovania.github.io/clock-tower.png") no-repeat center center;
-    background-size: cover; /* Ensure the image covers the section */
+}
+
+#hero::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-image: url('https://mathexpert314.github.io/kattovania.github.io/clock-tower.png'); /* Replace with your image URL */
+    background-size: cover;
+    background-position: center;
+    transform: translateZ(0); /* Triggers hardware acceleration */
+    z-index: -1;
+    will-change: transform;
 }
 
 #hero h2, #hero p {
