@@ -59,8 +59,8 @@ nav ul li a {
   left: 0;
   right: 0;
   bottom: 0;
-  background: url("https://mathexpert314.github.io/kattovania.github.io/clock-tower.png") no-repeat center center; /* Center the image */
-  background-size: cover; /* Cover the entire area without tiling */
+  background: url("https://mathexpert314.github.io/kattovania.github.io/clock-tower.png") no-repeat center center; /* Center the image and avoid tiling */
+  background-size: cover; /* Ensure the image covers the entire area */
   z-index: 1; /* Ensure it sits below the text */
 }
 
