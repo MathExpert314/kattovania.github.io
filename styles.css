@@ -48,14 +48,23 @@ nav a {
     bottom: 0;
     background-image: url('https://mathexpert314.github.io/kattovania.github.io/clock-tower.png'); /* Replace with your image URL */
     background-size: cover;
-    background-position: center top;
+    background-position: center 100px;
     z-index: -1;
     will-change: transform;
 }
 
-#hero h2, #hero p {
+#hero h2 {
     position: absolute;
     bottom: 20px; /* Position text above the image */
+    left: 50%;
+    transform: translateX(-50%);
+    color: white; /* Change text color for better visibility */
+    text-align: center; /* Center text */
+}
+
+#hero p {
+    position: absolute;
+    bottom: 60px; /* Position text above the image */
     left: 50%;
     transform: translateX(-50%);
     color: white; /* Change text color for better visibility */
