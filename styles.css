@@ -40,13 +40,16 @@ nav ul li a {
 }
 
 #hero {
-    position: relative; /* Add this line */
-    height: 300px; /* Adjust as needed */
+    position: relative;
+    width: 100%; /* Full width */
+    height: 0; /* Set height to 0 to allow padding-bottom to take effect */
+    padding-bottom: 1024.37%; /* Calculate padding-bottom to maintain aspect ratio (981 / 958 * 100) */
     display: flex;
     justify-content: center;
     align-items: center;
     color: #fff;
     text-align: center;
+    overflow: hidden; /* Hide any overflow content */
 }
 
 #hero::before { /* Create an overlay */
@@ -64,11 +67,7 @@ nav ul li a {
 #hero h2, #hero p { /* Bring text to the front */
     position: relative;
     z-index: 2;
-}
-
-#hero p {
-  color: #000000;
-  z-index: 3;
+    text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.7); /* Soft shadow for readability */
 }
 
 .content-section {
