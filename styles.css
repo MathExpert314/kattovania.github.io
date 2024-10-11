@@ -42,7 +42,7 @@ nav ul li a {
 #hero {
   position: relative; 
   width: 100%; /* Full width */
-  height: 0; /* Height will be determined by padding-bottom */
+  height: 0px; /* Height will be determined by padding-bottom */
   padding-bottom: 102.4%; /* Maintain aspect ratio (981 / 958 * 100) */
   display: flex;
   justify-content: center;
